@@ -115,5 +115,5 @@ def multiplication_table(N):
     # Генератор для формирования строк таблицы умножения от 0 до N
     for i in range(N+1):
         row = " ".join(str(i*j) for j in range(i+1))
-        yield row
+        return row
         
