@@ -11,6 +11,7 @@ def pairs(numbers_string):
     for number in set(numbers):
         count += numbers.count(number) * (numbers.count(number) - 1) // 2
     return count
+    # Верно
 
 def uniques(array):
     unique_elements = []
@@ -18,6 +19,7 @@ def uniques(array):
         if array.count(element) == 1:
             unique_elements.append(element)
     return unique_elements
+    # Верно
 
 
 
@@ -36,7 +38,7 @@ def ordered_list(array):
             right -= 1  # Уменьшаем указатель справа, если элемент равен 0
               
     return array  # Возвращаем измененный список
-
+    # Решение не проходит тесты
 
 
 
@@ -68,6 +70,7 @@ def cities(input_string):
         output.append(country_1.get(city, "City not found"))  # Добавляем соответствующую страну в список, если город найден
      
     return '\n'.join(output)  # Возвращаем список стран в виде строки, разделяя их символом новой строки
+    # Логика верна, но не проходит тесты, посмотрим на занятии
 
 #Sets
 def languages(input_string):
@@ -97,6 +100,7 @@ def languages(input_string):
         i += m + 1
 
     return f"{len(all_languages)}\n" + "\n".join(all_languages) + f"\n{len(individual_languages)}\n" + "\n".join(individual_languages)
+    # Тут решение чуть сложнее, разберем на занятии
 
  
 def list_gen(arr1, arr2):
@@ -116,4 +120,5 @@ def multiplication_table(N):
     for i in range(N+1):
         row = " ".join(str(i*j) for j in range(i+1))
         yield row
+    # Тут есть ошибка '0\n0 1' != '0 0\n0 1', посмотрим на занятии
         
